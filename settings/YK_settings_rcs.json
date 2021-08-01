@@ -1,0 +1,152 @@
+{
+	"name": "ACS ROCKET",
+
+	"warnings_en": true,
+
+	"layout": "LAYOUT_4PLUS",
+	"thrust_map": "SERVOS_DEG",
+	"orientation": "ORIENTATION_X_UP",
+	"v_nominal": 8.4,
+	"v_nominal_jack": 11.75,
+	"target_altitude_m": 1200.0,
+	"event_launch_accel": 8.0,
+	"event_launch_dh": 1.0,
+	"event_ignition_dh": 0.5,
+	"event_ignition_delay_s": 0.050,
+	"event_cutoff_delay_s": 0.2,
+	"event_cutoff_dh": 50.0,
+	"event_apogee_delay_s": 0.5,
+	"event_apogee_accel_tol": 2.0,
+	"event_apogee_dh": 10.0,
+	"event_landing_delay_early_s": 6.0,
+	"event_landing_delay_late_s": 30.0,
+	"event_start_landing_alt_m": 50.0,
+	"event_landing_alt_tol": 0.8,
+	"event_landing_vel_tol": 1.0,
+	"event_landning_accel_tol": 0.5,
+
+	"enable_magnetometer": false,
+	"enable_xbee": false,
+	"use_xbee_yaw": false,
+	"use_xbee_pitch": false,
+	"use_xbee_roll": false,
+	"enable_lidar": false,
+	"enable_encoders": false,
+	"enable_serial": true,
+	"enable_send_serial": true,
+	"enable_receive_serial": true,
+	"serial_send_update_hz": 20.0,
+	"serial_port_1": "/dev/ttyS1",
+	"serial_port_1_baud": 1000000,
+	"serial_port_2": "/dev/ttyACM1",
+	"serial_port_2_baud": 256000,
+
+	"printf_arm": true,
+	"printf_battery": true,
+	"printf_altitude": true,
+	"printf_proj_ap": true,
+	"printf_position": false,
+	"printf_rpy": true,
+	"printf_sticks": false,
+	"printf_setpoint": true,
+	"printf_u": true,
+	"printf_motors": true,
+	"printf_mode": true,
+	"printf_status": true,
+	"printf_xbee": false,
+	"printf_rev": false,
+	"printf_counter": false,
+
+	"enable_logging": true,
+	"log_sensors": true,
+	"log_state": true,
+	"log_setpoint": true,
+	"log_control_u": true,
+	"log_motor_signals": true,
+	"log_motor_signals_us": true,
+	"log_encoders": false,
+
+	"dest_ip": "169.254.97.190",
+	"my_sys_id": 1,
+	"mav_port": 14551,
+
+	"roll_controller": {
+		"gain": 1.0,
+		"CT_or_DT": "CT",
+		"TF_or_PID": "PID",
+		"kp": 1.0,
+		"ki": 0.0,
+		"kd": 0.0,
+		"crossover_freq_rad_per_sec": 31.41,
+		"numerator": [
+			0.1,
+			0.2,
+			0.3
+		],
+		"denominator": [
+			0.1,
+			0.2,
+			0.3
+		]
+	},
+
+	"pitch_controller": {
+		"gain": 1.0,
+		"CT_or_DT": "CT",
+		"TF_or_PID": "PID",
+		"kp": 1.5,
+		"ki": 0.001,
+		"kd": 0.03,
+		"crossover_freq_rad_per_sec": 62.83,
+		"numerator": [
+			0.1,
+			0.2,
+			0.3
+		],
+		"denominator": [
+			0.1,
+			0.2,
+			0.3
+		]
+	},
+
+	"yaw_controller": {
+		"gain": 1.0,
+		"CT_or_DT": "CT",
+		"TF_or_PID": "PID",
+		"kp": 1.5,
+		"ki": 0.001,
+		"kd": 0.03,
+		"crossover_freq_rad_per_sec": 62.83,
+		"numerator": [
+			0.1,
+			0.2,
+			0.3
+		],
+		"denominator": [
+			0.1,
+			0.2,
+			0.3
+		]
+	},
+
+	"altitude_controller": {
+		"gain": 1.0,
+		"CT_or_DT": "CT",
+		"TF_or_PID": "PID",
+		"kp": 0.5,
+		"ki": 0.001,
+		"kd": 0.0,
+		"crossover_freq_rad_per_sec": 6.283,
+		"numerator": [
+			0.1,
+			0.2,
+			0.3
+		],
+		"denominator": [
+			0.1,
+			0.2,
+			0.3
+		]
+	}
+}
