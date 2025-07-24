@@ -21,7 +21,3 @@ To install, you need to copy the entire RC_Pilot directory to BBB and cd into /R
 	compile the code by typing "make" (make sure you are doing is as root, type "sudo su")
 	you can also check robot control library functionality by running rc_test_* 
 		scripts (type rc_test_ and hit "Tab" key to see all options)
-
-
-
-For questions contact me, Yevhenii Kovryzhenko - yzk0058@auburn.edu
